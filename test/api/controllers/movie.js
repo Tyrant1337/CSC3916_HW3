@@ -11,7 +11,7 @@ describe('controllers', function() {
         it('should return an empty array', function (done) {
 
             request(server)
-                .get('/movie')
+                .get('/movies')
                 .set('Accept', 'application/json')
                 .expect('Content-Type', /json/)
                 .expect(200)
@@ -29,7 +29,7 @@ describe('controllers', function() {
       it('should accept a movie', function(done) {
 
         request(server)
-          .post('/movie')
+          .post('/movies')
           .send({ title: 'Underworld', year: 2003})
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
